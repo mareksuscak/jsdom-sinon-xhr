@@ -1,4 +1,7 @@
-# Introduction
+[![Build Status](https://travis-ci.org/mareksuscak/jsdom-xhr-patch.svg)](https://travis-ci.org/mareksuscak/jsdom-xhr-patch)
+
+Introduction
+============
 
 Provides patch for [XMLHttpRequest npm package](https://www.npmjs.com/package/xmlhttprequest) which doesn't expose `withCredentials` property and causes incorrect behaviour when using `jsdom` with `sinon.fakeServer`.
 
