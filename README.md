@@ -33,5 +33,5 @@ npm test
 
 # License
 
-See the [LICENSE](https://github.com/mareksuscak/jsdom-xhr-patch/blob/master/LICENSE) file.
+See the [LICENSE](https://github.com/mareksuscak/jsdom-xhr-patch/blob/master/LICENSE.md) file.
 
