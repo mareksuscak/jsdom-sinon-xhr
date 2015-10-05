@@ -26,6 +26,8 @@ After cloning the repo you can run test suite by invoking:
 
 ```
 git clone https://github.com/mareksuscak/jsdom-xhr-patch.git
+cd jsdom-xhr-patch
+npm install
 npm test
 ```
 
