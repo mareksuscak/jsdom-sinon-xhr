@@ -20,6 +20,15 @@ require('jsdom-xhr-patch').apply(window);
 
 Please note that in case `window.XMLHttpRequest` doesn't need patching you'll be notified in the Node's console.
 
+# Tests
+
+After cloning the repo you can run test suite by invoking:
+
+```
+git clone https://github.com/mareksuscak/jsdom-xhr-patch.git
+npm test
+```
+
 # License
 
 See the [LICENSE](https://github.com/mareksuscak/jsdom-xhr-patch/blob/master/LICENSE) file.
