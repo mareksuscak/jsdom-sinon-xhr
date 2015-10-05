@@ -1,2 +1,24 @@
-# jsdom-sinon-xhr
-This repository contains a patch for node-XMLHttpRequest npm package which is not spec-compliant and doesn't expose withCredentials property by default which causes incorrect behaviour with other libraries.
+# Introduction
+
+Provides patch for [XMLHttpRequest npm package](https://www.npmjs.com/package/xmlhttprequest) which doesn't expose `withCredentials` property and causes incorrect behaviour when using `jsdom` with `sinon.fakeServer`.
+
+# Usage
+
+Simply install the dependency:
+
+```
+npm install jsdom-xhr-patch --save
+```
+
+And apply the patch:
+
+```javascript
+// Must be applied before jQuery is require'd
+// but after window has been made available.
+require('jsdom-xhr-patch').apply(window);
+```
+
+# License
+
+See the [LICENSE](https://github.com/mareksuscak/jsdom-xhr-patch/blob/master/LICENSE) file.
+
