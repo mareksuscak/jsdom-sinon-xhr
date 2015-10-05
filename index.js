@@ -1,12 +1,5 @@
 'use strict';
 
-/**
- *  Usage:
- *
- *  // Don't forget to invoke before including jQuery
- *  require('jsdom-xhr-patch').apply(window);
- */
-
 // Monkey patching is not a good practice but there's simply no other way
 // at moment. :(
 //
