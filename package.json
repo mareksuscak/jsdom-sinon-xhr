@@ -1,0 +1,25 @@
+{
+  "name": "jsdom-sinon-xhr",
+  "version": "1.0.0",
+  "description": "Provides patch for node-XMLHttpRequest npm package which doesn't expose withCredentials property and causes incorrect behaviour when using jsdom with sinon.fakeServer.",
+  "repository": "https://github.com/mareksuscak/jsdom-xhr-patch",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "i": "^0.3.3",
+    "jquery": "^2.1.4",
+    "jsdom": "^6.5.1",
+    "mocha": "^2.3.3",
+    "npm": "^3.3.4",
+    "react": "^0.13.3",
+    "sinon": "^1.17.1",
+    "sinon-chai": "^2.8.0"
+  },
+  "scripts": {
+    "test": "mocha test/**/*.spec.js"
+  },
+  "author": "Marek Suscak <marek.suscak@gmail.com> (http://suscak.com)",
+  "license": "MIT"
+}
