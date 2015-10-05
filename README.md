@@ -18,6 +18,8 @@ And apply the patch:
 require('jsdom-xhr-patch').apply(window);
 ```
 
+Please note that in case `window.XMLHttpRequest` doesn't need patching you'll be notified in the Node's console.
+
 # License
 
 See the [LICENSE](https://github.com/mareksuscak/jsdom-xhr-patch/blob/master/LICENSE) file.
