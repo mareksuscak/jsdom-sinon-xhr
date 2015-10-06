@@ -16,7 +16,7 @@ npm install jsdom-xhr-patch --save
 And apply the patch:
 
 ```javascript
-// Must be applied before jQuery is require'd
+// Must be applied before jQuery and sinon are require'd
 // but after window has been made available.
 require('jsdom-xhr-patch').apply(window);
 ```
