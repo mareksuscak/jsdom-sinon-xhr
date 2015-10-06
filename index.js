@@ -29,9 +29,9 @@ function jsdomXhrPatch(context) {
   function PatchedXMLHttpRequest() {
     const xhr = OrigXMLHttpRequest.apply(this, arguments);
 
-    if(!xhr) {
+    if (!xhr) {
       console.warn('The expected xhr object wasn\'t returned. Failed to patch XMLHttpRequest.');
-      return;
+      return null;
     }
 
     // Define withCredentials with a default false based on the spec

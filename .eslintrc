@@ -1,3 +1,23 @@
 {
-  "extends": "airbnb"
+  // Use airbnb's styleguide as the baseline
+  "extends": "airbnb",
+
+  "ecmaFeatures": {
+    // node v4 still doesn't support quite a few
+    "defaultParams": false,
+    "destructuring": false,
+    "forOf": false,
+    "modules": false,
+    "spread": false,
+    "superInFunctions": false,
+    "jsx": false
+  },
+
+  "rules": {
+    // we're not using babel yet
+    "strict": [2, "global"],
+
+    // we want to use console for now
+    "no-console": 0
+  }
 }
