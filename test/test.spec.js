@@ -2,8 +2,6 @@
 
 const expect = require('chai').expect;
 const sinon = require('sinon');
-const React = require('react/addons');
-const TestUtils = React.addons.TestUtils;
 
 describe('jsdom-xhr-patch', () => {
   beforeEach(() => {
@@ -18,15 +16,15 @@ describe('jsdom-xhr-patch', () => {
   context('when applied, ensures', () => {
     describe('Original XMLHttpRequest', () => {
       it('is available in both global and window object as _OrigXMLHttpRequest property', () => {
-        expect(global._OrigXMLHttpRequest).to.be.ok;
-        expect(window._OrigXMLHttpRequest).to.be.ok;
-        expect('withCredentials' in (new window._OrigXMLHttpRequest)).to.be.false;
+        expect(global._OrigXMLHttpRequest).to.be.ok; // eslint-disable-line no-unused-expressions
+        expect(window._OrigXMLHttpRequest).to.be.ok; // eslint-disable-line no-unused-expressions
+        expect('withCredentials' in (new window._OrigXMLHttpRequest)).to.be.false; // eslint-disable-line no-unused-expressions
       });
     });
 
     describe('XMLHttpRequest', () => {
       it('is patched and contains withCredentials property', () => {
-        expect('withCredentials' in (new XMLHttpRequest)).to.be.true;
+        expect('withCredentials' in (new XMLHttpRequest)).to.be.true; // eslint-disable-line no-unused-expressions
       });
     });
 
@@ -34,17 +32,17 @@ describe('jsdom-xhr-patch', () => {
       it('does respond to XmlHttpRequests properly', (done) => {
         const uri = '/data';
 
-        const data = [{ id: 12, comment: "Hey there" }];
+        const data = [{ id: 12, comment: 'Hey there' }];
         this.sandbox.server.respondWith('GET', uri, [
           200, { 'Content-Type': 'application/json' },
           JSON.stringify(data)]
         );
 
-        var successSpy = sinon.spy();
+        const successSpy = sinon.spy();
 
         $.ajax({
           url: uri,
-          dataType: 'json'
+          dataType: 'json',
         }).done(successSpy).always(() => {
           expect(successSpy).to.have.been.calledWith(data);
           done();
@@ -54,9 +52,9 @@ describe('jsdom-xhr-patch', () => {
       });
     });
 
-    describe("jQuery", () => {
+    describe('jQuery', () => {
       it('correctly picks up the patched XmlHttpRequest', () => {
-        expect($.support.cors).to.be.true;
+        expect($.support.cors).to.be.true; // eslint-disable-line no-unused-expressions
       });
     });
   });

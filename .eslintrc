@@ -13,6 +13,14 @@
     "jsx": false
   },
 
+  "env": {
+    "mocha": true
+  },
+
+  "globals": {
+    "$": true
+  },
+
   "rules": {
     // we're not using babel yet
     "strict": [2, "global"],
