@@ -3,7 +3,7 @@
 Introduction
 ============
 
-UPDATE: Please note that as of `xmlhttprequest 1.8.0`, `withCredentials` is finally supported so it shouldn't not needed to include this patch anymore.
+UPDATE: Please note that as of `xmlhttprequest 1.8.0`, `withCredentials` is finally supported so it should not be needed to include this patch anymore.
 
 Provides patch for [XMLHttpRequest npm package](https://www.npmjs.com/package/xmlhttprequest) which doesn't expose `withCredentials` property and causes incorrect behaviour when using `jsdom` with `sinon.fakeServer`.
 
