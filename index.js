@@ -20,7 +20,10 @@ function jsdomXhrPatch(context) {
   }
 
   if ('withCredentials' in (new window.XMLHttpRequest())) {
-    console.warn('Existing XMLHttpRequest is already spec-compliant. You can safely remove the invocation of jsdomXhrPatch.');
+    if (typeof global.XMLHttpRequest === 'undefined') {
+      global.XMLHttpRequest = window.XMLHttpRequest;
+    }
+    console.warn('Existing XMLHttpRequest is already spec-compliant. You can safely remove the invocation of jsdomXhrPatch but don\'t forget to make XMLHttpRequest available as a global before including jQuery.');
     return;
   }
 
