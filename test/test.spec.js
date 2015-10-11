@@ -14,14 +14,6 @@ describe('jsdom-xhr-patch', () => {
   });
 
   context('when applied, ensures', () => {
-    describe('Original XMLHttpRequest', () => {
-      it('is available in both global and window object as _OrigXMLHttpRequest property', () => {
-        expect(global._OrigXMLHttpRequest).to.be.ok; // eslint-disable-line no-unused-expressions
-        expect(window._OrigXMLHttpRequest).to.be.ok; // eslint-disable-line no-unused-expressions
-        expect('withCredentials' in (new window._OrigXMLHttpRequest)).to.be.false; // eslint-disable-line no-unused-expressions
-      });
-    });
-
     describe('XMLHttpRequest', () => {
       it('is patched and contains withCredentials property', () => {
         expect('withCredentials' in (new XMLHttpRequest)).to.be.true; // eslint-disable-line no-unused-expressions
