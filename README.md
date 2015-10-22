@@ -5,6 +5,8 @@ Introduction
 
 **UPDATE:** Please note that as of `xmlhttprequest 1.8.0`, `withCredentials` is finally supported so it should not be needed to include this patch anymore. However make sure that `global.XMLHttpRequest` is available before including jQuery.
 
+**UPDATE 2:** As of `jsdom 7.0.0`, `xmlhttprequest` dependency was removed completely and replaced by a custom implementation which seems to be more spec-compliant. 
+
 Provides patch for [XMLHttpRequest npm package](https://www.npmjs.com/package/xmlhttprequest) which doesn't expose `withCredentials` property and causes incorrect behaviour when using `jsdom` with `sinon.fakeServer`.
 
 # Usage
